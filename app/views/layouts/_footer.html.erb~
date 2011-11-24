@@ -1,0 +1,10 @@
+<footer>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Terms of Agreement", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><a href="http://www.csupomona.edu">Cal Poly Pomona</a></li>
+      <li><a href="http://www.broncoathletics.com/">Bronco Athletics</a></li>
+    </ul>
+  </nav>
+</footer>

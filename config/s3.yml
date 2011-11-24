@@ -1,0 +1,9 @@
+development:
+ access_key_id: [AKIAJHR3JYJK2JYICC6A]
+ secret_access_key: [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]
+ bucket: [fashionappbucket]
+ 
+production:
+ access_key_id: [AKIAI3CTIQOAVRBVEPOA]
+ secret_access_key: [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]
+ bucket: [polywho]

@@ -1,0 +1,19 @@
+<h1>Find your fellow classmates!</h1>
+
+Search by using keywords instead of whole sentences for best results.
+<% form_tag users_path, :method => 'get' do %>
+  <fieldset class="search">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </fieldset>
+<% end %>
+
+
+<%= will_paginate %>
+
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>

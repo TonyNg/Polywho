@@ -1,0 +1,60 @@
+<h1>Sign up</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :"name (Your real name)" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :"email (Your csupomona.edu address)" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %> 
+  </div>
+  <br>
+  If you want to skip the fields below, just enter in your Facebook URL and fill in the rest later.
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :"year" %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :"major" %><br />
+    <%= f.text_field :major %>
+  </div>
+  <div class="field">
+    <%= f.label :"I'm looking to buy these books" %><br />
+    <%= f.text_field :books_buy %>
+  </div>
+  <div class="field">
+    <%= f.label :"I'm looking to sell these books" %><br />
+    <%= f.text_field :books_sell %>
+  </div>
+    <div class="field">
+    <%= f.label :"My Facebook webpage" %><br />
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :"I love to eat at these restaurants" %><br />
+    <%= f.text_field :restaurants %>
+  </div>
+  <div class="field">
+    <%= f.label :"Clubs/Activities/Interests" %><br />
+    <%= f.text_field :interests %>
+  </div>
+  <div>
+  <%= f.label :"Terms of Agreement (By checking this box, you have agreed to PolyWho's Terms of Agreement below)" %> <br />
+  <%= f.check_box :check %> 
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

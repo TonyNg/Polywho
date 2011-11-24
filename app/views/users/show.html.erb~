@@ -1,0 +1,34 @@
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+      <%= @user.name %>   
+        <br>
+        <div class="space"> <%= render 'follow_form' if signed_in? %> </div>
+         <%= gravatar_for @user, :size => 400 %>
+      </h1>
+   <% unless @user.microposts.empty? %>
+        <table class="microposts" summary="User microposts">
+          <%= render @microposts %>
+        </table>
+        <%= will_paginate @microposts %>
+      <% end %>
+     </td>
+    <td class="sidebar round">
+      <strong>Name: </strong> <%= @user.name %><br />
+      <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+      <strong>Blurbs: </strong> <%= @user.microposts.count %>
+      <%= render 'shared/stats' %>
+      <br>
+  <%= @user.year %> <br>
+  <%= @user.major %> <br>
+  <%= @user.books_sell %> <br>
+  <%= @user.books_buy %> <br>
+  <%= @user.facebook %> <br>
+  <%= @user.restaurants %><br>
+  <%= @user.interests %> 
+    </td>
+  </tr>
+</table>
+

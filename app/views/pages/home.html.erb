@@ -1,0 +1,26 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">What's up?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+     <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <h1>Hello Cal Poly Pomona students!</h1>
+
+  <p>
+    Built with a simple premise: Buy, sell, or trade your textbooks.
+    Beat the system. Then chat and discuss among your peers.
+    <p>
+    Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
+  </p>
+
+  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>
